@@ -19,7 +19,6 @@ function Products() {
                             />
                         </div>
                         <h3 className="mt-4 text-sm text-white">{product.name}</h3>
-                        <p className="mt-1 text-lg font-medium text-white">{product.price}</p>
                         </a>
                     ))}
                     </div>
@@ -36,7 +35,6 @@ const products = [
         id: 1,
         name: 'Air Jordan 1',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://cdn-images.farfetch-contents.com/15/53/12/82/15531282_29624522_600.jpg',
         imageAlt: 'Air Jordan 1 Low, Mid, High',
     },
@@ -44,55 +42,41 @@ const products = [
         id: 2,
         name: 'Air Jordan 4',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://www.manelsanchez.pt/uploads/media/images/air-jordan-4-retro-metallic-red-20.jpg',
         imageAlt: 'Air Jordan 4 Low, Mid, High',
     },
     {
         id: 3,
-        name: 'Yeezy 350',
-        href: '#',
-        price: 'x€',
-        imageSrc: 'https://cdn.shopify.com/s/files/1/0255/9429/8467/products/adidas-originals-yeezy-boost-350-v2-core-blackred_1_1000x1000.jpg?v=1627983720',
-        imageAlt: 'Yeezy 350',
-    },
-    {
-        id: 4,
         name: 'Yeezy V2',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://images.stockx.com/images/Adidas-Yeezy-Boost-350-V2-Zebra-Product-1.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606321670',
         imageAlt: 'Yeezy V2',
     },
     {
-        id: 5,
+        id: 4,
         name: 'Yeezy Slides',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://images.stockx.com/images/Yeezy-Slide-Bone-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1608522495',
         imageAlt: 'Yeezy Slides',
     },
     {
-        id: 6,
+        id: 5,
         name: 'Yeezy Foam',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://images.stockx.com/images/adidas-Yeezy-Foam-RNNR-Ararat-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1609432715',
         imageAlt: 'Yeezy Foam',
     },
     {
-        id: 7,
+        id: 6,
         name: 'Air Force 1',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://cutewallpaper.org/24/air-force-png/air-force-1-png-nike-air-force-1-png-free-transparent-png-download--pngkey.png',
         imageAlt: 'Air Force 1',
     },
     {
-        id: 8,
+        id: 7,
         name: 'Tech Fleece',
         href: '#',
-        price: 'x€',
         imageSrc: 'https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202012/10/00199440826099____8__1200x1200.jpg',
         imageAlt: 'Tech Fleece',
     },
