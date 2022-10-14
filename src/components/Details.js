@@ -25,17 +25,17 @@ export default class Details extends Component {
                                 </div>
                             {/*product text*/}
                                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                                    <h2>model:{title}</h2>
+                                    <h2>{title}</h2>
                                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                        made by: <span className="text-uppercase">{company}</span>
+                                        <span className="text-uppercase">{company}</span>
                                     </h4>
                                     <h4 className="text-blue">
                                         <strong>
-                                            Price : <span>$</span>{price}
+                                            Preço: {price}<span>€</span>
                                         </strong>
                                     </h4>
                                     <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                                            some info about product
+                                            Descrição
                                     </p>
                                     <p className="text-muted lead">
                                         {info}
@@ -44,7 +44,7 @@ export default class Details extends Component {
                                     <div>
                                        <Link to="/">
                                            <ButtonContainer>
-                                               back to products
+                                               Voltar
                                            </ButtonContainer>
                                         </Link>
                                             <ButtonContainer cart disabled={inCart ? true : false}
@@ -52,7 +52,7 @@ export default class Details extends Component {
                                                     value.addToCart(id);
                                                     value.openModal(id);
                                                 }}>
-                                               {inCart ? "inCart" : "add to cart"}
+                                               {inCart ? "no carrinho" : "adicionar"}
                                             </ButtonContainer>
                                     </div>
                                 </div>

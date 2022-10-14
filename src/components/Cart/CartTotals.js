@@ -14,19 +14,19 @@ export default function CartTotals({value}) {
                             onClick={() => {
                                 clearCart();
                             }}>
-                            clear cart
+                            Limpar carrinho
                         </button>
                     </Link>
                     <h5>
-                        <span className="text-title">subtotal :</span>
+                        <span className="text-title">Total:</span>
                         <strong>{cartSubTotal}</strong>
                     </h5>
                     <h5>
-                        <span className="text-title">subtotal :</span>
+                        <span className="text-title">IVA:</span>
                         <strong>{cartTax}</strong>
                     </h5>
                     <h5>
-                        <span className="text-title">subtotal :</span>
+                        <span className="text-title">Subtotal:</span>
                         <strong>{cartTotal}</strong>
                     </h5>
                </div>

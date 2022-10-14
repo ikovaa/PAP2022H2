@@ -7,14 +7,14 @@ export default class Default extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-10 mx-auto text-center text-title">
-                        <h1>error</h1>
+                        <h1>Erro</h1>
                         <h1 className="display-3">404</h1>
-                        <h2>page not found</h2>
-                        <h3>the requested URL 
+                        <h2>Pagina não encontrada</h2>
+                        <h3>O URL
                             <span className="text-danger">
                               {this.props.location.pathname}
                             </span>{""}
-                            was not found</h3>
+                            não existe</h3>
                     </div>
                 </div>
             </div>

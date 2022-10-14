@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
  --mainBlue:#2a2a72;
  --lightBlue:#009ffd;
@@ -6,12 +8,12 @@
  --mainYellow:#ffa400;
 }
 body{
-  font-family:"Anton", sans-serif !important;
+  font-family:"Poppins", sans-serif !important;
   background:var(--mainWhite) !important;
   color:var(--mainDark) !important;
 }
 .text-title{
-  font-family: 'Anton', cursive;
+  font-family: 'Poppins', cursive;
   letter-spacing:0.3rem;
   text-transform: uppercase; 
 }
