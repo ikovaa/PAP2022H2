@@ -1,26 +1,26 @@
-import './index.css'
 import React from 'react';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import FAQ from './pages/FAQ';
-import NoPage from './components/NoPage';
-import Navbar from './components/Navbar';
-import { Route, Routes } from 'react-router-dom';
-import ProductView from './components/ProductView';
+import {Switch,Route} from "react-router-dom";
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import ProductList from "./components/ProductList";
+import Details from "./components/Details";
+import Cart from "./components/Cart";
+import Default from "./components/Default";
+import Modal from './components/Modal';
 
 function App() {
   return (
-    <div className="App bg-neutral-900 overflow-hidden">
+    <React.Fragment>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="products" element={<Products />}> 
-          <Route path='productview/:id' element={<ProductView />} />
-        </Route>
-        <Route path="/faq" element={<FAQ/>} />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
-    </div>
+      <Switch>
+        <Route exact path="/" component={ProductList} />
+        <Route path="/details" component={Details} />
+        <Route path="/cart" component={Cart} />
+        <Route component={Default} />
+      </Switch>
+      <Modal />
+    </React.Fragment>
   );
 }
 
