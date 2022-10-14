@@ -16,9 +16,9 @@ const userNavigation = [
 
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'Products', href: 'products', current: false },
-  { name: 'FAQ', href: 'faq', current: false },
+  { name: 'Home', path: '/', current: false },
+  { name: 'Products', path: 'products', current: false },
+  { name: 'FAQ', path: 'faq', current: false },
 ]
 
 function classNames(...classes) {
@@ -43,7 +43,7 @@ export default function NavBar() {
                               ? 'bg-neutral-900 text-white'
                               : 'text-slate-100 hover:bg-red-500 hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
-                          )} to={item.href}>{item.name}</Link>
+                          )} to={item.path}>{item.name}</Link>
                         ))}
                       </div>
                     </div>
