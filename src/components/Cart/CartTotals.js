@@ -18,7 +18,7 @@ export default function CartTotals({value}) {
                         </button>
                     </Link>
                     <h5>
-                        <span className="text-title">Total:</span>
+                        <span className="text-title">Subtotal:</span>
                         <strong>{cartSubTotal}</strong>
                     </h5>
                     <h5>
@@ -26,7 +26,7 @@ export default function CartTotals({value}) {
                         <strong>{cartTax}</strong>
                     </h5>
                     <h5>
-                        <span className="text-title">Subtotal:</span>
+                        <span className="text-title">Total:</span>
                         <strong>{cartTotal}</strong>
                     </h5>
                </div>

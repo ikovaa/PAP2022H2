@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import {ProductConsumer} from '../context';
 import {ButtonContainer} from './Button';
 import {Link} from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import UndoIcon from '@mui/icons-material/Undo';
 
 export default class Modal extends Component {
     render() {
@@ -26,12 +28,12 @@ export default class Modal extends Component {
                                     <h5 className="text-muted">Preço: {price}€</h5>
                                     <Link to='/'>
                                     <ButtonContainer onClick={()=>closeModal()}>
-                                        Continuar às compras
+                                        <UndoIcon />
                                     </ButtonContainer>
                                     </Link>
                                     <Link to='/cart'>
                                     <ButtonContainer cart onClick={() => closeModal()}>
-                                         Ir para o carrinho
+                                        <ShoppingCartIcon />
                                     </ButtonContainer>
                                     </Link>
                                     </div>
@@ -57,6 +59,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 #modal{
-    background:var(--mainWhite);
+    border-radius .25rem;
+    background:var(--plain);
 }
 `;

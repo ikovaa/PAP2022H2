@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
+import UndoIcon from '@mui/icons-material/Undo';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import DoneIcon from '@mui/icons-material/Done';
+import Rating from '@mui/material/Rating';
+
 
 export default class Details extends Component {
     render() {
         return (
             <ProductConsumer>
                 {value=>{
-                   const {id, company, img, info, price, title, inCart} = value.detailProduct; 
+                   const {id, company, img, info, price, title, inCart, rating} = value.detailProduct; 
                    return(
                        <div className="container py-5">
                            {/*title*/}
@@ -25,11 +30,11 @@ export default class Details extends Component {
                                 </div>
                             {/*product text*/}
                                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                                    <h2>{title}</h2>
-                                    <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
+                                    <h4 className="text-title text-uppercase text-onsurface mt-3 mb-2">
                                         <span className="text-uppercase">{company}</span>
                                     </h4>
-                                    <h4 className="text-blue">
+                                    <Rating name="read-only" value={rating} precision={0.5} readOnly />
+                                    <h4 className="text-onsurface">
                                         <strong>
                                             Preço: {price}<span>€</span>
                                         </strong>
@@ -44,7 +49,7 @@ export default class Details extends Component {
                                     <div>
                                        <Link to="/">
                                            <ButtonContainer>
-                                               Voltar
+                                               <UndoIcon />
                                            </ButtonContainer>
                                         </Link>
                                             <ButtonContainer cart disabled={inCart ? true : false}
@@ -52,7 +57,7 @@ export default class Details extends Component {
                                                     value.addToCart(id);
                                                     value.openModal(id);
                                                 }}>
-                                               {inCart ? "no carrinho" : "adicionar"}
+                                                {inCart ? (<DoneIcon />) : (<AddShoppingCartIcon />)}
                                             </ButtonContainer>
                                     </div>
                                 </div>
